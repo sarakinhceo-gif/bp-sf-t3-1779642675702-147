@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정보 - 백링크 자동화 프로그램? 니 서버 웜업부터 점검해라</title>
+  <meta name="description" content="마포에서 직접 굴리는 서버 웜업 프로그램의 상세 정보. 백링크 자동화가 왜 구라인지, 진짜 웜업은 어떻게 하는지 까발린다. 지역 시그널 강화.">
+  <meta name="keywords" content="백링크 자동화, 서버 웜업, 백링크 프로그램, 백링크 자동화 프로그램, 마포, 웜업 툴, PBN, Tier3, 서버 웜업 정보">
+  <meta name="author" content="Aegis Warmer">
+  <link rel="canonical" href="https://sf-t3-1779642675702-147.pages.dev/info">
+  <meta name="bpaas-design-system" content="brutalist-avantgarde">
+  <meta name="bpaas-design-theme" content="kr-neon-void">
+  <!-- OG 메타 -->
+  <meta property="og:title" content="정보 - 백링크 자동화 프로그램? 니 서버 웜업부터 점검해라">
+  <meta property="og:description" content="마포에서 직접 굴리는 서버 웜업 프로그램의 상세 정보. 백링크 자동화가 왜 구라인지, 진짜 웜업은 어떻게 하는지 까발린다. 지역 시그널 강화.">
+  <meta property="og:image" content="https://sf-t3-1779642675702-147.pages.dev/og-image.jpg">
+  <meta property="og:url" content="https://sf-t3-1779642675702-147.pages.dev/info">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="Aegis Warmer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="정보 - 백링크 자동화 프로그램? 니 서버 웜업부터 점검해라">
+  <meta name="twitter:description" content="마포에서 직접 굴리는 서버 웜업 프로그램의 상세 정보. 백링크 자동화가 왜 구라인지, 진짜 웜업은 어떻게 하는지 까발린다. 지역 시그널 강화.">
+  <meta name="twitter:image" content="https://sf-t3-1779642675702-147.pages.dev/og-image.jpg">
+  <style>
+    /* RESET + BASE */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #f0f0f0;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    a {
+      color: #ff3366;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #ff6699;
+      text-decoration: underline;
+    }
+    /* TYPOGRAPHY – raw, oversized, brutal */
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: #ff3366;
+      text-shadow: 0 0 20px rgba(255, 51, 102, 0.4);
+    }
+    h2 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      border-left: 6px solid #ff3366;
+      padding-left: 1rem;
+      margin: 2rem 0 1rem;
+    }
+    h3 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 1.5rem 0 0.8rem;
+    }
+    p, li {
+      font-size: 1rem;
+      max-width: 72ch;
+      color: #ccc;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      letter-spacing: 0.05em;
+    }
+    /* LAYOUT – full bleed, asymmetric, overlapping */
+    .full-bleed {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      padding: 0 5%;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* NAV – brutalist hamburger */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 2px solid #ff3366;
+      padding: 0.8rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #ff3366;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    nav .nav-links a {
+      color: #f0f0f0;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+    nav .nav-links a:hover,
+    nav .nav-links a.active {
+      border-bottom-color: #ff3366;
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: #ff3366;
+      border-radius: 2px;
+    }
+    .tel-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #ff3366;
+      color: #0a0a0a !important;
+      padding: 0.4rem 1.2rem;
+      font-weight: 800;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .tel-link:hover {
+      background: #ff6699;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      nav .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 2px solid #ff3366;
+      }
+      nav .nav-links.open {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+    /* HERO */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 6rem 1.5rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,51,102,0.15) 0%, transparent 70%);
+      z-index: 0;
+    }
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 700px;
+      z-index: 1;
+      position: relative;
+      color: #aaa;
+    }
+    /* CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .card {
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      padding: 1.8rem;
+      border-radius: 4px;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .card:hover {
+      border-color: #ff3366;
+      transform: translateY(-4px);
+    }
+    .card h3 {
+      color: #ff3366;
+      margin-top: 0;
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #2a2a2a;
+      padding: 1.2rem 0;
+    }
+    .faq-item h3 {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1rem;
+      color: #f0f0f0;
+      margin: 0;
+      user-select: none;
+    }
+    .faq-item h3::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: #ff3366;
+      transition: transform 0.2s;
+    }
+    .faq-item.open h3::after {
+      transform: rotate(45deg);
+    }
+    .faq-item .answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s;
+      padding: 0 0.5rem;
+    }
+    .faq-item.open .answer {
+      max-height: 300px;
+      padding: 0.8rem 0.5rem;
+    }
+    .faq-item .answer p {
+      margin: 0;
+      color: #aaa;
+    }
+    /* FOOTER */
+    footer {
+      margin-top: auto;
+      background: #0a0a0a;
+      border-top: 2px solid #ff3366;
+      padding: 2rem 5%;
+      text-align: center;
+      color: #666;
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: #ff3366;
+    }
+    /* MISC */
+    .tag {
+      display: inline-block;
+      background: #ff3366;
+      color: #0a0a0a;
+      padding: 0.2rem 0.8rem;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: 20px;
+      margin-right: 0.3rem;
+    }
+    .highlight {
+      color: #ff3366;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">AEGIS WARMER</div>
+    <button class="hamburger" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">홈</a></li>
+      <li><a href="/info" class="active">정보</a></li>
+      <li><a href="/service">서비스</a></li>
+      <li><a href="/price">가격</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact" class="tel-link">문의</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>서버 웜업,<br>백링크 자동화의 핵심</h1>
+    <p>마포에서 직접 굴리는 프로그램. 백링크 자동화 구라 쳐내고, 서버 웜업으로 진짜 링크파워를 만들어라. 지역 시그널도 챙겨라.</p>
+    <div style="display: flex; gap: 0.8rem; margin-top: 1.5rem; flex-wrap: wrap; justify-content: center;">
+      <span class="tag">#서버웜업</span>
+      <span class="tag">#백링크자동화</span>
+      <span class="tag">#마포</span>
+      <span class="tag">#PBN</span>
+      <span class="tag">#Tier3</span>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2>왜 서버 웜업이 먼저냐?</h2>
+    <p>백링크 자동화 프로그램? 90%는 구라다. 진짜는 서버를 먼저 데워야 한다. 웜업 안 된 서버에 링크 박아봤자 구글한테 걸린다. 마포에서 우리는 서버 웜업으로 시작해서 백링크 빌딩으로 끝낸다. 아래가 그
+</body>
+</html>
