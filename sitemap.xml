@@ -2,21 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-147/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-147/about.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-147/blog.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-147/posts/field_note-002-1kp6ydt.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-147/posts/review-001-1kp6ydt.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-147/posts/review-002-1f9zu24.html</loc>
@@ -32,7 +44,7 @@
   </url>
   <url>
     <loc>https://sarakinhceo-gif.github.io/bp-sf-t3-1779642675702-147/feed.xml</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
