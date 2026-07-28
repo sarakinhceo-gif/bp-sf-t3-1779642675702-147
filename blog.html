@@ -341,39 +341,75 @@
     </div>
 </header>
 
-<main>
-    <!-- HERO -->
-    <section class="container full-bleed" style="padding-top:24px;">
-        <div class="hero">
-            <div class="hero-content">
-                <span class="section-label">🔥 서버 웜업의 신</span>
-                <h1 class="glow-text">백링크<br>자동화는<br>구라다</h1>
-                <p>니가 산 프로그램, 진짜 서버 웜업이 없으면 <span class="text-accent">쓰레기</span>다. 마포에서 직접 굴리는 Aegis Warmer가 증명한다.</p>
-                <a href="tel:010-6279-0862" class="cta-phone" style="margin-top:24px; font-size:1.8rem; padding:12px 36px;">010-6279-0862</a>
-            </div>
-            <div class="hero-visual">
-                <!-- SVG 불꽃 + 방패 -->
-                <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="200" height="200" fill="none"/>
-                    <path d="M100 20 L180 70 L180 130 L100 180 L20 130 L20 70 Z" stroke="#ff3b00" stroke-width="6" fill="#111" />
-                    <circle cx="100" cy="100" r="40" stroke="#fff" stroke-width="4" fill="none" />
-                    <text x="100" y="112" font-family="Impact" font-size="44" fill="#ff3b00" text-anchor="middle" dominant-baseline="middle">W</text>
-                    <path d="M60 140 Q80 100 100 140 Q120 100 140 140" stroke="#ff3b00" stroke-width="6" fill="none" opacity="0.8"/>
-                    <circle cx="70" cy="70" r="6" fill="#ff3b00"/>
-                    <circle cx="130" cy="70" r="6" fill="#ff3b00"/>
-                </svg>
-            </div>
-        </div>
+<main class="container">
+  <article class="blog-post">
+    <header class="hero hero-content brutal-border">
+      <p class="section-label">서버 웜업 · 마포 직배송</p>
+      <h1>웜업과 백링크 자동화, 실무에서 확인하는 순서</h1>
+      <p class="content">자동화 도구를 실무에 들이는 팀들이 공통으로 거치는 점검 순서가 있습니다. 특정 제품을 홍보하는 글이 아니라, 절차를 이해하는 데 참고할 수 있는 정보 위주로 정리했습니다.</p>
+    </header>
+
+    <section class="stripe-bg">
+      <h2 class="text-accent">1단계 — 서버 상태 확인</h2>
+      <p class="content">신규로 준비한 도메인이나 IP가 있다면, 자동화 작업을 시작하기 전에 웜업이 어느 정도 진행됐는지부터 확인하는 것이 일반적입니다. 급격한 트래픽 증가는 스팸 판정으로 이어질 수 있어 단계적인 접근이 권장됩니다.</p>
     </section>
 
-    <!-- 블로그 글 -->
-    <section class="container">
-        <article class="blog-post overlap-top">
-            <h2>🔥 백링크 자동화 프로그램? 니 서버 웜업부터 점검해라</h2>
-            <div class="mono" style="color:#888; margin-bottom:24px;">2025.03.28 | by Aegis Warmer</div>
-            <p>솔직히 말해라. 백링크 자동화 프로그램 사놓고 "이거면 되겠지" 하고 있는 거 아니냐? 니 링크가 왜 안 먹히는지 아냐? <strong class="text-accent">서버 웜업이 안 됐기 때문이다.</strong></p>
-            <p>PBN 돌릴 때 가장 중요한 건 IP 신뢰도, 컨텐츠 시드, 그리고 웜업 기간이다. 그런데 대부분의 자동화 툴은 그냥 링크만 박아대고 서버는 쌩까더라. 그게 왜 문제냐? 구글이 보는 건 <span class="text-accent">링크가 나온 서버의 생체 리듬</span>이야. 갑자기 튀어나온 서버에서 폭발하는 링크? 그건 노이즈일 뿐이다.</p>
-            <blockquote>“서버 웜업 없이 백링크 자동화는 자살 행위다.”</blockquote>
-            <p>우린 마포에서 직접 서버를 굴린다. 웜업 주기, 컨텐츠 리프레시, 링크 속도 조절. 이게 다 수동으로 들어간다. 자동화는 도
+    <section class="skew-left">
+      <h2 class="text-accent">2단계 — 자동화 범위 설정</h2>
+      <p class="content">전체 작업을 한 번에 자동화하기보다, 반복 작업 위주로 범위를 좁혀서 시작하고 결과를 지켜보며 범위를 넓혀가는 방식이 실무에서 자주 언급됩니다.</p>
+    </section>
+
+    <section class="reviews-grid">
+      <div class="review-card">
+        <h3>확인 항목 — 로그 기록</h3>
+        <p class="content">작업 이력과 결과를 되짚어볼 수 있는 로그 기능이 있는지 확인합니다.</p>
+      </div>
+      <div class="review-card">
+        <h3>확인 항목 — 처리량 제한</h3>
+        <p class="content">하루 처리 건수를 제한할 수 있는지 확인해두면 과도한 작업을 방지할 수 있습니다.</p>
+      </div>
+      <div class="review-card">
+        <h3>확인 항목 — 예외 처리</h3>
+        <p class="content">오류가 발생했을 때 자동으로 멈추는지, 수동 개입이 필요한지 확인합니다.</p>
+      </div>
+      <div class="review-card">
+        <h3>확인 항목 — 알림 설정</h3>
+        <p class="content">작업이 실패했을 때 알림을 받을 수 있는지 확인해두면 대응이 빨라집니다.</p>
+      </div>
+    </section>
+
+    <section class="brutal-border-accent rotate-neg">
+      <h2>자주 헷갈리는 부분</h2>
+      <p class="content"><strong>웜업</strong>은 준비 단계, <strong>자동화</strong>는 실행 단계로 구분해 이해하면 순서를 헷갈리지 않습니다. 두 단계를 동시에 시작하기보다 순차적으로 접근하는 편이 안정적이라는 의견이 많습니다.</p>
+    </section>
+
+    <section class="overlap-top bg-white">
+      <h2 class="text-black">단계가 지날수록 달라지는 점검 방식</h2>
+      <p class="content">초반에는 범위를 좁게 잡고 결과를 자주 들여다보는 편이 안전하다는 의견이 많습니다. 시간이 지나 운영이 손에 익으면 확인 주기를 늘리고 자동화가 담당하는 범위를 조금씩 넓혀가는 흐름이 실무에서 흔히 언급됩니다.</p>
+    </section>
+
+    <section class="overlap-left">
+      <h2>적용 전 마지막으로 볼 것들</h2>
+      <ul>
+        <li>1단계와 2단계를 순서대로 진행했는지</li>
+        <li>로그와 알림 설정을 마쳤는지</li>
+        <li>예외 상황이 생겼을 때의 대응 방식을 정해두었는지</li>
+        <li>처리 결과를 주기적으로 확인할 담당자를 정해두었는지</li>
+      </ul>
+    </section>
+
+    <section class="bg-black text-white">
+      <h2>요약</h2>
+      <p class="content">서버 상태 확인, 자동화 범위 설정, 로그와 처리량 점검까지 순서대로 짚어보면 도입 초기의 시행착오를 줄이는 데 도움이 됩니다.</p>
+    </section>
+
+    <section class="cta-section bg-accent">
+      <p class="cta-phone">문의 연락처</p>
+      <a class="no-rounded" href="tel:010-6279-0862">010-6279-0862</a>
+    </section>
+  </article>
+</main>
+
+
 </body>
 </html>
