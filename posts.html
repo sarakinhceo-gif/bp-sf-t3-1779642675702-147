@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · sf-t3-1779642675702-147</title>
+  <meta name="description" content="sf-t3-1779642675702-147에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-147.maphoshirts.today/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* RESET + BASE */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body {
+ background: #000;
+ color: #fff;
+ font-family: Impact, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ line-height: 1.2;
+ -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
+ }
+ img, svg { display: block; max-width: 100%; height: auto; }
+ a { color: #ff3b00; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+
+ /* TYPOGRAPHY – raw, oversized, brutal */
+ h1 { font-size: clamp(3.5rem, 12vw, 7rem); font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.9; }
+ h2 { font-size: clamp(2.8rem, 8vw, 4.5rem); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; }
+ h3 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; }
+ p, li { font-family: 'Courier New', Courier, monospace; font-size: 1.2rem; line-height: 1.4; margin-bottom: 1rem; }
+ .mono { font-family: 'Courier New', Courier, monospace; }
+
+ /* LAYOUT – full bleed, asymmetric, overlapping */
+ .full-bleed { width: 100%; max-width: none; }
+ .container { padding: 0 72px; margin: 0 auto; max-width: 1440px; }
+ section { padding: 72px 0; margin-bottom: 48px; position: relative; }
+
+ /* BRUTALIST BORDERS & TEXTURES */
+ .brutal-border { border: 4px solid #fff; }
+ .brutal-border-accent { border: 4px solid #ff3b00; }
+ .skew-left { transform: skewX(-3deg); }
+ .skew-right { transform: skewX(3deg); }
+ .rotate-neg { transform: rotate(-1.5deg); }
+ .rotate-pos { transform: rotate(1.5deg); }
+
+ /* NEGATIVE MARGIN OVERLAP */
+ .overlap-top { margin-top: -60px; }
+ .overlap-bottom { margin-bottom: -40px; }
+ .overlap-left { margin-left: -40px; }
+ .overlap-right { margin-right: -40px; }
+
+ /* COLOR UTILITIES */
+ .bg-black { background: #000; }
+ .bg-white { background: #fff; color: #000; }
+ .bg-accent { background: #ff3b00; color: #000; }
+ .text-accent { color: #ff3b00; }
+ .text-white { color: #fff; }
+ .text-black { color: #000; }
+
+ /* HEADER */
+ header {
+ padding: 24px 72px;
+ border-bottom: 4px solid #fff;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ z-index: 100;
+ }
+ .logo {
+ font-size: 2.5rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.1em;
+ color: #ff3b00;
+ line-height: 1;
+ }
+ .logo span { color: #fff; }
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 48px;
+ font-size: 1.3rem;
+ text-transform: uppercase;
+ font-weight: 700;
+ }
+ nav a { color: #fff; border-bottom: 3px solid transparent; padding-bottom: 4px; transition: 0.1s; }
+ nav a:hover { border-bottom-color: #ff3b00; color: #ff3b00; text-decoration: none; }
+
+ /* HAMBURGER — 반응형 */
+ .hamburger-checkbox { display: none; }
+ .hamburger-label { display: none; flex-direction: column; gap: 6px; cursor: pointer; padding: 8px; border: 3px solid #fff; background: #000; }
+ .hamburger-label span { display: block; width: 30px; height: 3px; background: #fff; transition: 0.2s; }
+ .mobile-nav { display: none; }
+
+ /* HERO */
+ .hero {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 48px;
+ align-items: center;
+ padding: 72px 0;
+ border-bottom: 4px solid #ff3b00;
+ margin-bottom: 0;
+ }
+ .hero-content { position: relative; z-index: 2; }
+ .hero-content h1 { margin-bottom: 24px; }
+ .hero-content p { font-size: 1.4rem; max-width: 600px; border-left: 6px solid #ff3b00; padding-left: 24px; margin-bottom: 32px; }
+ .hero-visual {
+ background: #111;
+ border: 4px solid #fff;
+ padding: 48px 24px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transform: rotate(1.5deg);
+ min-height: 300px;
+ position: relative;
+ }
+ .hero-visual svg { width: 100%; height: auto; max-width: 320px; }
+
+ /* 블로그 섹션 */
+ .blog-post {
+ border: 4px solid #fff;
+ padding: 72px;
+ margin: 0 0 48px 0;
+ background: #0a0a0a;
+ position: relative;
+ }
+ .blog-post::before {
+ content: '🔥';
+ position: absolute;
+ top: -30px; left: 48px;
+ font-size: 4rem;
+ line-height: 1;
+ }
+ .blog-post h2 { margin-bottom: 32px; border-bottom: 4px solid #ff3b00; padding-bottom: 16px; }
+ .blog-post p { margin-bottom: 1.4rem; }
+ .blog-post blockquote {
+ border-left: 8px solid #ff3b00;
+ padding-left: 24px;
+ margin: 32px 0;
+ font-style: italic;
+ font-size: 1.6rem;
+ font-family: Impact, sans-serif;
+ text-transform: uppercase;
+ color: #ff3b00;
+ }
+
+ /* UGC 리뷰 카드 */
+ .reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 48px;
+ margin: 72px 0;
+ }
+ .review-card {
+ background: #111;
+ border: 4px solid #fff;
+ padding: 32px 24px;
+ transform: rotate(var(--rot, 0deg));
+ position: relative;
+ }
+ .review-card:nth-child(odd) { --rot: -1.5deg; }
+ .review-card:nth-child(even) { --rot: 1.5deg; }
+ .review-card .stars { color: #ff3b00; font-size: 1.8rem; letter-spacing: 4px; margin-bottom: 12px; }
+ .review-card .nick { font-weight: 700; font-size: 1.5rem; text-transform: uppercase; }
+ .review-card .date { font-family: 'Courier New', monospace; color: #888; font-size: 0.9rem; margin-bottom: 16px; }
+ .review-card .content { font-family: 'Courier New', monospace; font-size: 1.1rem; line-height: 1.4; }
+
+ /* CTA */
+ .cta-section {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+ gap: 48px;
+ padding: 72px;
+ border: 4px solid #ff3b00;
+ background: #000;
+ margin: 48px 0;
+ }
+ .cta-section h2 { font-size: clamp(2.5rem, 6vw, 4rem); }
+ .cta-phone {
+ font-size: 3rem;
+ font-weight: 700;
+ color: #ff3b00;
+ border: 4px solid #ff3b00;
+ padding: 16px 48px;
+ display: inline-block;
+ background: #000;
+ transition: 0.1s;
+ white-space: nowrap;
+ }
+ .cta-phone:hover { background: #ff3b00; color: #000; text-decoration: none; }
+
+ /* FOOTER */
+ footer {
+ border-top: 4px solid #fff;
+ padding: 48px 72px;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+ font-family: 'Courier New', monospace;
+ font-size: 0.9rem;
+ color: #888;
+ }
+ footer a { color: #fff; border-bottom: 2px solid #ff3b00; }
+ footer .copyright { text-transform: uppercase; letter-spacing: 0.1em; }
+
+ /* RESPONSIVE — 768px */
+ @media (max-width: 768px) {
+ .container { padding: 0 24px; }
+ header { padding: 16px 24px; flex-wrap: wrap; }
+ nav ul { display: none; }
+ .hamburger-label { display: flex; }
+ .hamburger-checkbox:checked ~ .mobile-nav {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ background: #000;
+ border: 4px solid #fff;
+ padding: 24px;
+ gap: 16px;
+ margin-top: 16px;
+ }
+ .mobile-nav a {
+ font-size: 1.5rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ color: #fff;
+ border-bottom: 3px solid #ff3b00;
+ padding: 8px 0;
+ }
+ .hero { grid-template-columns: 1fr; gap: 48px; padding: 48px 0; }
+ .hero-visual { transform: none; min-height: 200px; }
+ .blog-post { padding: 32px 24px; margin: 24px 0; }
+ .blog-post::before { left: 24px; font-size: 3rem; top: -20px; }
+ .reviews-grid { gap: 32px; margin: 48px 0; }
+ .review-card { --rot: 0deg !important; }
+ .cta-section { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+ .cta-phone { font-size: 2rem; padding: 12px 24px; white-space: normal; }
+ footer { padding: 32px 24px; flex-direction: column; gap: 16px; text-align: center; }
+ section { padding: 48px 0; }
+ h1 { font-size: clamp(2.8rem, 15vw, 4rem); }
+ h2 { font-size: clamp(2rem, 10vw, 3rem); }
+ .overlap-top, .overlap-bottom, .overlap-left, .overlap-right { margin: 0; }
+ }
+
+ /* 추가 브루탈 디테일 */
+ .section-label {
+ font-family: 'Courier New', monospace;
+ font-size: 0.9rem;
+ color: #ff3b00;
+ border: 2px solid #ff3b00;
+ display: inline-block;
+ padding: 4px 12px;
+ margin-bottom: 24px;
+ text-transform: uppercase;
+ letter-spacing: 0.2em;
+ }
+ .stripe-bg {
+ background: repeating-linear-gradient(45deg, #111, #111 10px, #000 10px, #000 20px);
+ }
+ .glow-text { text-shadow: 4px 4px 0 #ff3b00; }
+ .no-rounded { border-radius: 0 !important; }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · sf-t3-1779642675702-147">
+  <meta property="og:description" content="sf-t3-1779642675702-147에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-147.maphoshirts.today/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">AEGIS<span>WARMER</span></div>
+ <input type="checkbox" class="hamburger-checkbox" id="hamburger-toggle">
+ <label for="hamburger-toggle" class="hamburger-label" aria-label="메뉴 열기">
+ 
+ </label>
+ <nav>
+ <ul>
+ <li><a href="#">HOME</a></li>
+ <li><a href="#">BLOG</a></li>
+ <li><a href="#">WARMER</a></li>
+ 
+ </ul>
+ </nav>
+ <!-- 모바일 메뉴 -->
+ <div class="mobile-nav">
+ <a href="#">HOME</a>
+ <a href="#">BLOG</a>
+ <a href="#">WARMER</a>
+ 
+ </div>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 34개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-1kp6ydt.html">백링크 자동화 프로그램 현장에서 놓치기 쉬운 포인트를 기록해봤다</a>
+        <p class="post-item__summary">마포 지역에서 서버 웜업과 관련된 네트워크 인프라를 운영하다 보면 검색 엔진 최적화 효율을 높이기 위해 백링크 자동화 프로그램 활용을 심도 있게 고민하게 됩니다. 하지만 많은 운영자가 도구의 편의성</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1402.html">백링크 자동화 프로그램 이용자가 확인할 구글 신뢰 지수 모발이식 솔루션 기준</a>
+        <p class="post-item__summary">마포의 백링크 자동화 프로그램 정보는 단순 목록보다 맥락이 중요합니다. 어떤 상황에서 필요한 정보인지 먼저 정하면 검색 결과를 훨씬 덜 흔들리게 읽을 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0979.html">효율적인 서버 웜업 과정에서 고민하는 백링크 자동화 프로그램 도입 시점</a>
+        <p class="post-item__summary">마포 인근에서 새로운 웹 서비스를 구축하고 배포할 때 안정성을 검증하기 위한 서버 웜업 작업은 반드시 거쳐야 할 필수 과정입니다. 이 시기에 사이트의 초기 인지도를 높이고 유입 경로를 다각화하기 위</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0980.html">효율적인 백링크 자동화 프로그램 활용을 위한 서버 웜업 작업의 필요성</a>
+        <p class="post-item__summary">마포 지역에서 디지털 마케팅을 진행할 때 검색엔진 최적화는 빠질 수 없는 요소입니다. 특히 백링크 자동화 프로그램 도입을 고려한다면 초기 인프라 구축 단계가 매우 중요합니다. 대량의 링크를 생성하기</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0981.html">백링크 자동화 프로그램 사용 전 확인해야 할 서버 안정성 검토 사항</a>
+        <p class="post-item__summary">웹 서비스 초기 단계에서 진행하는 서버 웜업은 사이트 안정성 확보를 위한 필수 과정입니다. 마포의 IT 기업들이 트래픽 과부하를 예방하기 위해 초기 장비 세팅에 집중하는 이유도 여기에 있습니다. 이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0982.html">마포 IT 벤처가 백링크 자동화 프로그램 구축 시 반드시 짚어야 할 안전장치</a>
+        <p class="post-item__summary">디지털 마케팅에서 웹사이트의 검색 엔진 최적화는 지속적인 서버 웜업 과정과 닮아 있습니다. 마포 지역의 IT 벤처들은 안정적인 트래픽 흐름을 만들기 위해 초기부터 사이트의 기초 체력을 키웁니다. 이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0983.html">마포에서 효과적인 검색 노출을 위한 백링크 자동화 프로그램 활용법</a>
+        <p class="post-item__summary">신규 웹사이트를 개설하거나 마포 지역에서 새로운 온라인 비즈니스를 시작할 때 검색 엔진 최적화는 필수적입니다. 초기 인지도를 높이기 위해 많은 운영자가 백링크 자동화 프로그램을 고민하곤 합니다. 하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0984.html">마포에서 백링크 자동화 프로그램 구동 시 안정적인 서버 웜업이 필요한 이유</a>
+        <p class="post-item__summary">마포의 개발 환경에서 신규 도메인의 신뢰도를 높이는 서버 웜업은 필수적입니다. 초기 인프라 구축 단계에서 트래픽을 점진적으로 늘려야 서버 과부하를 막을 수 있습니다. 기초적인 안정성이 확보되어야 대</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0985.html">마포 지역의 효율적인 검색엔진 최적화를 위한 백링크 자동화 프로그램 활용법</a>
+        <p class="post-item__summary">마포 지역의 IT 스타트업과 개인 사업자들 사이에서 웹사이트 노출을 극대화하기 위한 검색엔진 최적화 경쟁이 뜨겁습니다. 특히 효율적인 검색 순위 상승을 목표로 백링크 자동화 프로그램을 도입하는 이들</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0986.html">마포에서 백링크 자동화 프로그램을 안정적으로 구동하는 서버 최적화 방법</a>
+        <p class="post-item__summary">온라인 마케팅 효율을 극대화하고자 백링크 자동화 프로그램을 도입하는 곳이 많아졌습니다. 대량의 링크 생성 과정에서 발생하는 서버 과부하는 사이트 차단이나 다운 문제를 일으키기 쉽습니다. 마포의 많은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0987.html">마포에서 시작하는 효율적인 백링크 자동화 프로그램 운용법</a>
+        <p class="post-item__summary">최근 검색엔진 최적화 시장에서는 수작업의 한계를 극복하기 위해 기술적 도구를 도입하는 추세가 뚜렷합니다. 특히 마포 지역의 IT 기업들을 중심으로 효율적인 링크 빌딩을 돕는 백링크 자동화 프로그램에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0988.html">마포에서 시작하는 백링크 자동화 프로그램 도입과 서버 웜업의 중요성</a>
+        <p class="post-item__summary">최근 마포 지역의 IT 비즈니스 현장에서는 온라인 가시성을 높이려는 시도가 활발합니다. 특히 검색 최적화를 돕는 백링크 자동화 프로그램을 효율적으로 도입하려는 움직임이 많습니다. 다만 기술적 준비 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0989.html">마포에서 시작하는 효율적인 백링크 자동화 프로그램 활용법</a>
+        <p class="post-item__summary">새로운 웹서비스를 출시할 때 초기 서버 웜업과 함께 검색엔진 최적화는 필수적인 단계로 꼽힙니다. 특히 IT 벤처가 밀집한 마포 지역에서는 안정적인 서버 트래픽 확보와 동시에 사이트 인지도를 높이려는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0990.html">효율적인 검색 엔진 노출을 위한 백링크 자동화 프로그램 도입 시 주의할 점</a>
+        <p class="post-item__summary">신규 웹사이트를 활성화하고 검색 엔진의 신뢰도를 높이기 위해 서버 웜업 단계를 거치는 곳이 많습니다. 이 과정에서 포털 사이트 노출을 빠르게 유도하기 위한 방법으로 외부 링크 구축을 고민하게 됩니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260707-0991.html">효율적인 웹사이트 운영을 위한 백링크 자동화 프로그램과 서버 최적화 전략</a>
+        <p class="post-item__summary">최근 웹사이트의 검색 엔진 노출 순위를 높이기 위해 백링크 자동화 프로그램 도입을 고려하는 운영자가 늘고 있습니다. 대량의 링크를 자동으로 생성해 주는 기술은 시간과 비용을 절약하는 데 유용한 도구</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0328.html">백링크 자동화 프로그램 사용 시 도메인 신용 한도 체크</a>
+        <p class="post-item__summary">온라인 사이트를 관리하다 보면 백링크 자동화 프로그램을 사용하여 순위를 높이려는 시도를 하게 됩니다. 하지만 무분별한 링크 생성은 검색엔진의 제재를 받을 위험이 큽니다. 특히 도메인의 신용 한도를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0329.html">백링크 자동화 프로그램 활용과 구글 알고리즘 감점 치료 및 백링크 수술실 원리</a>
+        <p class="post-item__summary">어느 날 갑자기 검색 결과에서 자사 웹사이트의 순위가 급락하는 상황을 마주하면 당혹감을 감출 수 없습니다. 무분별하게 유입된 저품질 링크들이 누적되면서 검색엔진의 페널티를 받게 되는 경우가 빈번합니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0330.html">백링크 자동화 프로그램 진실과 셔츠룸 사이트 선택의 올바른 시간대</a>
+        <p class="post-item__summary">흔히들 셔츠룸 이용이나 특정 공간의 정보를 온라인에서 확인하는 것이 무의미하다고 오해하곤 합니다. 하지만 적절한 정보를 사전에 습득하는 것은 시간과 비용을 절약하는 가장 현명한 방법입니다. 단순히 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0331.html">백링크 자동화 프로그램 활용한 구글 인덱싱 속도 초고속 광회선 대역폭 최적화</a>
+        <p class="post-item__summary">웹사이트의 콘텐츠가 즉각적으로 검색 결과에 반영되려면 서버의 응답 속도와 네트워크 대역폭이 최상의 상태여야 합니다. 구글 인덱싱 속도를 높이기 위해서는 단순히 페이지를 생산하는 것을 넘어, 크롤러가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0332.html">백링크 자동화 프로그램 필터링과 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드</a>
+        <p class="post-item__summary">지금 당신이 찾고자 하는 그 장소, 과연 온라인상의 정보가 전부일까요? 수많은 광고와 마케팅 문구 속에서 진짜 괜찮은 업체를 가려내기 위해 고민하고 계신지 궁금합니다. 잘못된 정보를 바탕으로 계획을</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
